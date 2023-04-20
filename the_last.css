@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 :root{
-    --Purple: hsl(259, 100%, 65%);
+    --Purple: green;
     --Light-red: hsl(0, 100%, 67%);
     --White: hsl(0, 0%, 100%);
     --Off-white: hsl(0, 0%, 94%);
@@ -103,7 +103,25 @@ span{
     margin-right: 2px;
 }
  
-@media (max-width: 375px)  {
+.mt1{
+    position: absolute;
+    top: 22%;
+    left: 10%;
+    display: none;
+}
+.mt2{
+    position: absolute;
+    top: 22%;
+    left: 31%;
+    display: none;
+}
+.mt3{
+    position: absolute;
+    top: 22%;
+    left: 52.5%;
+    display: none;
+}
+@media (max-width: 450px)  {
     .the_scrt{
         position: relative;
         width: 95%;
@@ -139,5 +157,21 @@ span{
     }
     .day,.month,.years{
         font-size: 25px;
+    }
+    .mt1{
+        font-size: 15px;
+        position: absolute;
+        left: 12.5%;
+    }
+    .mt2{
+        font-size: 15px;
+        position: absolute;
+        left: 39.5%;
+    }
+    .mt3{
+        font-size: 15px;
+        position: absolute;
+        left: 66%;
+
     }
 }
