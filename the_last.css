@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 :root{
-    --Purple: green;
+    --Purple: hsl(259, 100%, 65%);
     --Light-red: hsl(0, 100%, 67%);
     --White: hsl(0, 0%, 100%);
     --Off-white: hsl(0, 0%, 94%);
