@@ -1,0 +1,143 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:root{
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+
+    --font-size:32px;
+    
+    --font-family: 'Poppins', sans-serif;
+}
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Light-grey);
+    font-size: var(--Font-Size);
+    font-family: var(--Font-Family);
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+
+
+
+.the_scrt{
+    height: 600px;
+    width: 800px;
+    margin: 10% auto 10% auto;
+    border-radius: 20px;
+    position: relative;
+    padding: 50px;
+    background-color: var(--White);
+    border-bottom-right-radius:150px ;
+    top: -7.5%;
+}
+
+#botum{
+    height: 80px;
+    width: 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    background-color:var(--Purple);
+    background-image: url(./assets/images/icon-arrow.svg);
+    position: absolute;
+    top:25%;
+    right: 5%;
+    color: transparent;
+}
+
+.display{
+    position: absolute;
+    top: 25%;
+    font-size: 75px;
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-style: italic;
+}
+span{
+    color: var(--Purple);
+}
+
+.the_date{
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: row;
+    
+}
+.day,.month,.years{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    font-family: var(--font-family);
+    color: var(--Smokey-grey);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+#dd,#mm,#yy{
+    width: 140px;
+    height: 65px;
+    margin-left: 30px;
+    font-size: 32px;
+    font-weight: 600;
+    border-radius: 10px ;
+    border: 1px solid var(--Smokey-grey);
+}
+
+.lin{
+    border: 0.1px solid var(--Light-grey);
+    margin-top: 7%;
+    margin-right: 2px;
+}
+ 
+@media (max-width: 375px)  {
+    .the_scrt{
+        position: relative;
+        width: 95%;
+        margin-left: 10px;
+        height: 800px;
+    }
+    .display{
+        position: absolute;
+        left: 15%;
+        top: 65%;
+        transform: translateY(-50%);
+        font-size: 85px;
+    }
+    #botum{
+        position: absolute;
+        top: 29.5%;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%);
+        height: 100px;
+        width: 100px;
+    }
+        .the_date{
+            margin-right: 50px;
+        }
+
+    .lin{
+        margin-top: 105px;
+        
+    }
+    #dd,#mm,#yy{
+        height: 90px;
+    }
+    .day,.month,.years{
+        font-size: 25px;
+    }
+}
