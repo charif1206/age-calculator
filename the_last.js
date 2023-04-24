@@ -9,8 +9,6 @@ let mv1 = document.getElementById('mv1');
 let mv2 = document.getElementById('mv2');
 let mv3 = document.getElementById('mv3');
 
-
-
 let maxdays=0;
 let monthnum=1;
 let r;
@@ -58,29 +56,32 @@ yyy = Date_Now.getFullYear();
         r=true;
     }
     if(r==false){
-
-        if(ddd<day){
-            d11=Number(day)-Number(ddd) +maxdays;
-                }else{
-                    d11=Number(day)-Number(ddd);
-        }
-        if(ddd<day){
-                if(mmm<month){
-                m22=Number(month) - Number(mmm) +12-1;
-                }else{
-                m22=Number(month)-Number(mmm)-1;
-            }
-        }else{
-            if(mmm<month){
-                m22=Number(month)-Number(mmm)+12;
-            }else{
-                m22=Number(month)-Number(mmm);
-            }
-        }
         if(mmm<month){
             y33=Number(yyy)-Number(year)-1;
         }else{
             y33=yyy-Number(year);
+        }
+        if(ddd<day){
+            d11=Number(day)-Number(ddd) +maxdays;
+            if(mmm<=month){
+            m22=Number(month) - Number(mmm) +12-1;
+            }else{
+            m22=Number(month)-Number(mmm)-1;
+        }
+        d11=Number(day)-Number(ddd) +maxdays;
+    }else{
+        
+        if(mmm<month){
+            m22=Number(month)-Number(mmm)+12;
+        }else{
+            m22=Number(month)-Number(mmm);
+        }
+        d11=Number(day)-Number(ddd);
+    }
+        if(ddd<day){
+            
+                }else{
+                    
         }
         syear.textContent=y33;
         smonth.textContent=m22;

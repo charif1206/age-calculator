@@ -108,23 +108,27 @@ span{
     top: 22%;
     left: 10%;
     display: none;
+    color: red;
 }
 .mt2{
     position: absolute;
     top: 22%;
     left: 31%;
     display: none;
+    color: red;
 }
 .mt3{
     position: absolute;
     top: 22%;
     left: 52.5%;
     display: none;
+    color: red;
 }
 @media (max-width: 450px)  {
     .the_scrt{
+        margin-top: 20%;
         position: relative;
-        width: 95%;
+        width: 90vh;
         margin-left: 10px;
         height: 800px;
     }
