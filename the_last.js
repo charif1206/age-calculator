@@ -50,39 +50,40 @@ yyy = Date_Now.getFullYear();
         mv2.style.display = "inline-block";
         r=true;
     }
-    if(year>yyy || year<=0){
+    if(year>yyy || year<=0 || (yyy==year && month==mmm && day>ddd) || (yyy==year && month>mmm) ){
         yy.style.borderColor = "red";
         mv3.style.display = "inline-block";
         r=true;
     }
     if(r==false){
-        if(mmm<month){
-            y33=Number(yyy)-Number(year)-1;
+        if(mmm>=month){
+            
+            y33=yyy-year;
         }else{
-            y33=yyy-Number(year);
+            
+            y33=yyy-year-1;
         }
         if(ddd<day){
-            d11=Number(day)-Number(ddd) +maxdays;
-            if(mmm<=month){
-            m22=Number(month) - Number(mmm) +12-1;
-            }else{
-            m22=Number(month)-Number(mmm)-1;
+            d11=ddd-day +maxdays;
+            if(mmm>month){
+            m22=mmm - month-1;
+            }else if(mmm==month){
+                m22=mmm-month+12-1;
+            y33=yyy-year-1;
+            } else{
+            m22=mmm-month+12-1;
         }
-        d11=Number(day)-Number(ddd) +maxdays;
     }else{
         
-        if(mmm<month){
-            m22=Number(month)-Number(mmm)+12;
+        if(mmm>=month){
+            m22=mmm-month;
         }else{
-            m22=Number(month)-Number(mmm);
+            m22=mmm-month +12;
         }
-        d11=Number(day)-Number(ddd);
+        d11=ddd-day;
     }
-        if(ddd<day){
             
-                }else{
-                    
-        }
+
         syear.textContent=y33;
         smonth.textContent=m22;
         sday.textContent=d11;
